@@ -1,7 +1,7 @@
 function IssuesModel() {
     var self = this;
-    this.issues = ko.observableArray([]);
-    this.fetch = function() {
+    self.issues = ko.observableArray([]);
+    self.fetch = function() {
         $.getJSON("http://culturaltrail.herokuapp.com/issues", function(data) {
             // Now use this data to update your view models,
             // and Knockout will update your UI automatically
@@ -10,15 +10,12 @@ function IssuesModel() {
                 self.issues.push(item);
             });
         });
-        // $.ajax({
-        //     url: "http://culturaltrail.herokuapp.com/issues",
-        //     cache: false
-        // })
-        // .done(function( html ) {
-        //     console.log(html);
-        // })
-        // .error(function(fsdf) {
-        //     console.log(fsdf);
-        // });
-    }
+    };
+    self.loggedIn = ko.observable(false);
+    self.uselessStuff = ko.computed(function() {
+        if(self.loggedIn()) {
+            self.fetch();
+        }
+        return 1;
+    }, self);
 }
