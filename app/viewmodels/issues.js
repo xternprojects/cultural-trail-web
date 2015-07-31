@@ -7,6 +7,7 @@
     return {
         displayName: 'Issues',
         issues: ko.observableArray([]),
+        issueView: ko.observable('card.html'),
         activate: function () {
             //the router's activator calls this function and waits for it to complete before proceeding
             if (this.issues().length > 0) {
@@ -27,6 +28,12 @@
         },
         add: function() {
             router.navigate('issue/add');
+        },
+        switchToTableView: function() {
+            this.issueView('tableRow.html');
+        },
+        switchToCardView: function() {
+            this.issueView('card.html');
         }
     };
 });

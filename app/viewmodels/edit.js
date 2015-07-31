@@ -24,6 +24,9 @@ define(['plugins/http', 'plugins/router', 'durandal/app', 'knockout'], function 
             // http.post
             router.navigate('issue/'+this.id);
         },
+        cancel: function() {
+            router.navigate('issue/'+this.id);
+        },
         back: function() {
             router.navigate('');
         }
