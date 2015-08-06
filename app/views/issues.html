@@ -1,0 +1,23 @@
+﻿<section>
+    <h2 data-bind="text: displayName"></h2>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="#" data-bind="
+        click:switchToTableView,
+        css: {
+          active: issueView() === 'tableRow.html'
+        }"
+      ><span class="glyphicon glyphicon-list"></span></a>
+      <a class="btn btn-primary" href="#" data-bind="
+        click:switchToCardView,
+        css: {
+            active: issueView() === 'card.html'
+        }"
+      ><span class="glyphicon glyphicon-th-large"></span></a>
+    </div>
+    <button type="button" class="btn btn-primary" data-bind="click:add">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Issue
+    </button>
+    <div class="row" data-bind="foreach: issues">
+        <div data-bind="compose: $parent.issueView"></div>
+    </div>
+</section>

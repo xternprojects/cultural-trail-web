@@ -1,0 +1,72 @@
+<section>
+    <button type="button" class="btn btn-primary" data-bind="click:back">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back To Issues
+    </button>
+
+    <div class="row">
+        <h3 class="col-xs-5 col-xs-offset-2">Issue Details</h3>
+        <div class="col-xs-4 col-sm-2">
+            <button type="button" class="btn btn-primary detail-edit-issue-button" data-bind="click:edit">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit Issue
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-xs-offset-2"><strong>Name</strong></div>
+        <div class="col-xs-5 col-sm-4 col-md-3 col-xs-offset-1" data-bind="text: name"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-xs-offset-2"><strong>Description</strong></div>
+        <div class="col-xs-5 col-sm-4 col-md-3 col-xs-offset-1 multiline" data-bind="text: description"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-xs-offset-2"><strong>Status</strong></div>
+        <div class="col-xs-5 col-sm-4 col-md-3 col-xs-offset-1" >
+            <span data-bind="text: openText, css: openHightlightClass" class="label"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-xs-offset-2"><strong>Priority</strong></div>
+        <div class="col-xs-5 col-sm-4 col-md-3 col-xs-offset-1" >
+            <span data-bind="text: priorityText, css: priorityHightlightClass" class="label"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-xs-offset-2"><strong>Reported</strong></div>
+        <div class="col-xs-5 col-sm-4 col-md-3 col-xs-offset-1" data-bind="text: reportedText"></div>
+    </div>
+    <div class="row" data-bind="visible: resolvedDate() !== null">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-xs-offset-2"><strong>Resolved</strong></div>
+        <div class="col-xs-5 col-sm-4 col-md-3 col-xs-offset-1" data-bind="text: resolvedText"></div>
+    </div>
+
+    <div class="row buffer-top">
+        <div class="col-xs-9 col-sm-7 col-xs-offset-2 top-buffer bottom-buffer">
+            <div id="issue-image-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators
+                <ol class="carousel-indicators">
+                    <li data-target="#issue-image-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#issue-image-carousel" data-slide-to="1"></li>
+                </ol> -->
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img data-bind="attr: {src: pictureUrl}" src="" />
+                    </div>
+                </div>
+
+                <!-- Controls
+                <a class="left carousel-control" href="#issue-image-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#issue-image-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> -->
+            </div>
+        </div>
+    </div>
+</section>

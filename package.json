@@ -1,0 +1,14 @@
+{
+	"name": "cultural-trail-web",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xternprojects/cultural-trail-web"
+	},
+	"dependencies": {
+		"connect": "*",
+		"serve-static": "*"
+	}
+}
