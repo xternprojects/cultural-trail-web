@@ -7,7 +7,8 @@
         'knockout': '../lib/knockout/knockout-3.1.0',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'flat-ui': '../lib/flat-ui/js/flat-ui',
-        'jquery': '../lib/jquery/jquery-1.9.1'
+        'jquery': '../lib/jquery/jquery-1.9.1',
+        'moment': '../lib/moment/moment'
     },
     shim: {
         'bootstrap': {

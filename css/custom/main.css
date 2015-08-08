@@ -1,0 +1,12 @@
+.top-buffer {
+    margin-top: 20px;
+}
+
+.bottom-buffer {
+    margin-bottom: 20px;
+}
+
+.detail-edit-issue-button {
+    margin-top: 30px;
+    float: right;
+}
