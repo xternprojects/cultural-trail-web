@@ -15,7 +15,7 @@
             }
 
             var that = this;
-            return http.get('http://culturaltrail.herokuapp.com/issues', {}).then(function(response) {
+            return http.get('http://culturaltrail.herokuapp.com/issues').then(function(response) {
                 that.issues(response);
             });
         },

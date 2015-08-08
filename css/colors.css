@@ -1,0 +1,22 @@
+/*
+    light-blue: #06A7E1
+    medium-blue: #03578B
+    dark-blue: #023D61
+    light-green: #A2C02F
+    dark-green: #45812B
+*/
+
+.navbar-inverse {
+    background-color: #03578B;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #06A7E1;
+}
+
+.navbar-inverse .navbar-form .form-control, .navbar-inverse .navbar-form .select2-search input[type=text] {
+    color: #03578B;
+    background-color: #023D61;
+    border-color: transparent;
+}
